@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Nexcent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/public/icon-1.svg" alt="Icon" class="logo-icon">
+                <img src="/public/nexcent-1.svg" alt="Nexcent" class="logo-text">
+            </div>
+            
+            <div class="nav-right">
+                <nav class="navigation">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Community</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                </nav>
+                
+                <button class="register-btn active">
+                    Register Now
+                    <svg class="arrow-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="register-section">
+        <div class="container">
+            <div class="register-container">
+                <div class="register-content">
+                    <div class="register-header">
+                        <h1 class="register-title">Join Our Community</h1>
+                        <p class="register-description">
+                            Create your account and start managing your community with Nexcent
+                        </p>
+                    </div>
+
+                    <form class="register-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization" class="form-label">Organization Name</label>
+                            <input type="text" id="organization" name="organization" class="form-input" required>
+                            <span class="error-message" id="organizationError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organizationType" class="form-label">Organization Type</label>
+                            <select id="organizationType" name="organizationType" class="form-select" required>
+                                <option value="">Select organization type</option>
+                                <option value="membership">Membership Organization</option>
+                                <option value="association">National Association</option>
+                                <option value="club">Club or Group</option>
+                                <option value="nonprofit">Non-profit</option>
+                                <option value="business">Business</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="organizationTypeError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-input" required>
+                            <span class="error-message" id="passwordError"></span>
+                            <div class="password-requirements">
+                                <p>Password must contain:</p>
+                                <ul>
+                                    <li id="lengthReq">At least 8 characters</li>
+                                    <li id="uppercaseReq">One uppercase letter</li>
+                                    <li id="lowercaseReq">One lowercase letter</li>
+                                    <li id="numberReq">One number</li>
+                                    <li id="specialReq">One special character</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and insights
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Create Account
+                            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="register-footer">
+                        <p>Already have an account? <a href="#" class="link">Sign in here</a></p>
+                    </div>
+                </div>
+
+                <div class="register-image">
+                    <img src="/public/illustration.svg" alt="Registration illustration" class="illustration">
+                    <div class="benefits">
+                        <h3>Why join Nexcent?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Streamlined membership management
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Automated payment processing
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Community engagement tools
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Analytics and insights
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="/public/icon-1.svg" alt="Icon" class="logo-icon">
+                        <img src="/public/nexcent.svg" alt="Nexcent" class="logo-text">
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright © 2025 Landify UI Kit.</p>
+                        <p>All rights reserved</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-title">Company</h3>
+                        <div class="footer-menu">
+                            <a href="#" class="footer-link">About us</a>
+                            <a href="#" class="footer-link">Blog</a>
+                            <a href="#" class="footer-link">Contact us</a>
+                            <a href="#" class="footer-link">Pricing</a>
+                            <a href="#" class="footer-link">Testimonials</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title">Support</h3>
+                        <div class="footer-menu">
+                            <a href="#" class="footer-link">Help center</a>
+                            <a href="#" class="footer-link">Terms of service</a>
+                            <a href="#" class="footer-link">Legal</a>
+                            <a href="#" class="footer-link">Privacy policy</a>
+                            <a href="#" class="footer-link">Status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>
