@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         firstName: /^[a-zA-Z]{2,30}$/,
         lastName: /^[a-zA-Z]{2,30}$/,
         email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        phone: /^[\+]?[1-9][\d]{0,15}$/,
+        phone: /^[\+]?[0-9][\d]{0,10}$/,
         organization: /^[a-zA-Z0-9\s\-\.]{2,100}$/,
         password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
     };
